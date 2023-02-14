@@ -6,17 +6,21 @@ import presetIcons from "unocss/preset-icons";
 import presetUno from "unocss/preset-uno";
 import { fileURLToPath } from "url";
 
-export default defineConfig({
-  plugins: [
-    UnoCSS({
-      presets: [presetUno(), presetAttributify(), presetIcons({})],
-    }),
-    react(),
-  ],
+export default defineConfig(() => {
+  const dark = "class";
 
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("src", import.meta.url)),
+  return {
+    plugins: [
+      UnoCSS({
+        presets: [presetUno({ dark }), presetAttributify({ dark }), presetIcons({})],
+      }),
+      react(),
+    ],
+
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("src", import.meta.url)),
+      },
     },
-  },
+  };
 });
