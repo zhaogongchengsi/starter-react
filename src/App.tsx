@@ -1,12 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "@/pages/index";
+import Login from "@/pages/login/index";
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="flex flex-col">
-      {count} <button onClick={() => setCount(count + 1)}>setCount</button>{" "}
+    <div className="w-full h-screen">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 }
