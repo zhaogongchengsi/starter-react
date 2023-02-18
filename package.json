@@ -18,14 +18,16 @@
   },
   "devDependencies": {
     "@iconify-json/tabler": "^1.1.60",
+    "@types/mockjs": "^1.0.7",
     "@types/node": "^18.13.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "mockjs": "^1.1.0",
     "sass": "^1.58.1",
     "typescript": "^4.9.3",
     "unocss": "^0.49.4",
     "vite": "^4.1.0",
-    "vite-plugin-pages-generate-router": "^0.3.0"
+    "vite-plugin-mock": "^2.9.6"
   }
 }
