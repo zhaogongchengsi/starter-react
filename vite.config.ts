@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
   const dark = "class",
     proxyprefix = env.VITE_PROXY,
     proxytraget = env.VITE_TARGET,
-    usemock = env.VITE_USE_MOCK === "true" ? true : false;
+    usemock = env.VITE_USE_MOCK === "true";
 
   return {
     server: {

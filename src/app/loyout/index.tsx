@@ -1,20 +1,24 @@
-import Sider from "./Sider";
+import Slider from "./Sider";
 import { LayoutProps } from "./props";
-import { Layout, Button } from "@arco-design/web-react";
+import { Layout } from "@arco-design/web-react";
+import React from "react";
 
-export default function ({ children, aside }: LayoutProps) {
-  return (
-    <Layout className="w-full h-screen">
-      <Sider> {aside} </Sider>
-      <Layout>
-        {/* todo: 顶部 */}
-        <Layout.Header>
-          <Button shape="round" className="trigger">
-            搜索侧边栏
-          </Button>
-        </Layout.Header>
-        <Layout style={{ padding: "0 24px" }}>123</Layout>
-      </Layout>
-    </Layout>
+const AppLayout :React.FC<LayoutProps> = ({ children, aside, header }) => {
+
+    return (
+        <Layout className="w-full h-screen flex-row!">
+          <Slider> {aside} </Slider>
+          <Layout>
+            <Layout.Header>
+                {header}
+            </Layout.Header>
+            <Layout>
+                <Layout.Content>
+                {children}
+                </Layout.Content>
+            </Layout>
+          </Layout>
+        </Layout>
   );
 }
+export default AppLayout
