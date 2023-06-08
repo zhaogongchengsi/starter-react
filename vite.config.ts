@@ -6,6 +6,7 @@ import presetIcons from "unocss/preset-icons";
 import presetUno from "unocss/preset-uno";
 import { fileURLToPath } from "url";
 import { viteMockServe } from "vite-plugin-mock";
+import Pages from 'vite-plugin-pages'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -40,6 +41,7 @@ export default defineConfig(({ mode }) => {
           prodEnabled: false, //生产环境下为false，这样就不会被打包到生产包中
           ignore: /^\_/, //忽略开始_路径
         }),
+      Pages()
     ],
 
     resolve: {

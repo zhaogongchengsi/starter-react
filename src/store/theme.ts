@@ -9,11 +9,13 @@ export const darkModeAtom = atomWithStorage(THEME_KEY, false);
 
 const setLight = () => {
   body.classList.remove(T.dark);
+  body.classList.add(T.light);
   body.removeAttribute("arco-theme");
 };
 
 const setDark = () => {
-  body.classList.remove(T.dark);
+  body.classList.remove(T.light);
+  body.classList.add(T.dark);
   body.setAttribute("arco-theme", T.dark);
 };
 
