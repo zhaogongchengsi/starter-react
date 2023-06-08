@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 import { Provider } from "jotai";
 import { themeStore } from "@/store";
-// @ts-ignore
 import routes from "~react-pages";
 import AppLayout from "@/app/layout";
 
